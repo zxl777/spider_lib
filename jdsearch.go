@@ -49,13 +49,13 @@ var JDSearch = &Spider{
 					for loop := aid["loop"].([2]int); loop[0] < loop[1]; loop[0]++ {
 						ctx.AddQueue(
 							&request.Request{
-								Url:  "https://twitter.com/search?q=%23minecraft&src=typd&lang=en,
+								Url:  "https://twitter.com/search?q=%23minecraft&src=typd&lang=en",
 								Rule: aid["Rule"].(string),
 							},
 						)
 						ctx.AddQueue(
 							&request.Request{
-								Url:  "https://twitter.com/search?q=%23minecraft&src=typd&lang=en,
+								Url:  "https://twitter.com/search?q=%23minecraft&src=typd&lang=en",
 								Rule: aid["Rule"].(string),
 							},
 						)
