@@ -34,7 +34,7 @@ var JDSearch = &Spider{
 	Name:        "京东搜索",
 	Description: "京东搜索结果 [search.jd.com]",
 	// Pausetime: 300,
-	Keyin:        keyword,
+	Keyin:        KEYIN,
 	Limit:        LIMIT,
 	EnableCookie: false,
 	RuleTree: &RuleTree{
