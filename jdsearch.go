@@ -31,8 +31,8 @@ func init() {
 }
 
 var JDSearch = &Spider{
-	Name:        "京东搜索",
-	Description: "京东搜索结果 [search.jd.com]",
+	Name:        "Twitter搜索",
+	Description: "Twitter搜索结果 [https://twitter.com/search?q=%23minecraft&src=typd&lang=en]",
 	// Pausetime: 300,
 	Keyin:        KEYIN,
 	Limit:        LIMIT,
@@ -49,13 +49,13 @@ var JDSearch = &Spider{
 					for loop := aid["loop"].([2]int); loop[0] < loop[1]; loop[0]++ {
 						ctx.AddQueue(
 							&request.Request{
-								Url:  "http://search.jd.com/Search?keyword=" + ctx.GetKeyin() + "&enc=utf-8&qrst=1&rt=1&stop=1&click=&psort=&page=" + strconv.Itoa(2*loop[0]+1),
+								Url:  "https://twitter.com/search?q=%23minecraft&src=typd&lang=en,
 								Rule: aid["Rule"].(string),
 							},
 						)
 						ctx.AddQueue(
 							&request.Request{
-								Url:  "http://search.jd.com/Search?keyword=" + ctx.GetKeyin() + "&enc=utf-8&qrst=1&rt=1&stop=1&click=&psort=&page=" + strconv.Itoa(2*loop[0]+2),
+								Url:  "https://twitter.com/search?q=%23minecraft&src=typd&lang=en,
 								Rule: aid["Rule"].(string),
 							},
 						)
