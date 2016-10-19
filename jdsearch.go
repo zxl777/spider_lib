@@ -49,13 +49,13 @@ var JDSearch = &Spider{
 					for loop := aid["loop"].([2]int); loop[0] < loop[1]; loop[0]++ {
 						ctx.AddQueue(
 							&request.Request{
-								Url:  "http://search.jd.com/Search?keyin=" + ctx.GetKeyin() + "&enc=utf-8&qrst=1&rt=1&stop=1&click=&psort=&page=" + strconv.Itoa(2*loop[0]+1),
+								Url:  "http://search.jd.com/Search?keyword=" + ctx.GetKeyin() + "&enc=utf-8&qrst=1&rt=1&stop=1&click=&psort=&page=" + strconv.Itoa(2*loop[0]+1),
 								Rule: aid["Rule"].(string),
 							},
 						)
 						ctx.AddQueue(
 							&request.Request{
-								Url:  "http://search.jd.com/Search?keyin=" + ctx.GetKeyin() + "&enc=utf-8&qrst=1&rt=1&stop=1&click=&psort=&page=" + strconv.Itoa(2*loop[0]+2),
+								Url:  "http://search.jd.com/Search?keyword=" + ctx.GetKeyin() + "&enc=utf-8&qrst=1&rt=1&stop=1&click=&psort=&page=" + strconv.Itoa(2*loop[0]+2),
 								Rule: aid["Rule"].(string),
 							},
 						)
